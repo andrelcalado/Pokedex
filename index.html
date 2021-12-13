@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        padding: 50px;
+        font-family: sans-serif;
+        justify-content: center;
+    }
+
+    .pokemonCard {
+        position: relative;
+        bottom: 0;
+        box-shadow: 0px 0px 25px rgba(54, 54, 54, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        width: 200px;
+        height: 450px;
+        transition: 0.4s;
+    }
+
+    .pokemonCard:hover {
+        bottom: 10px;
+        box-shadow: 0px 0px 25px rgba(1, 157, 201, 0.2);
+    }
+
+    .cardHeader {
+        padding: 20px 20px 0px 20px;
+        background-color: rgb(179, 222, 243);
+        
+    }
+
+    .pokemonTitleContainer {
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(70, 70, 70)
+    }
+
+    .pokemonImg {
+        margin-bottom: -25px;
+    }
+
+    .pokemonImg > img {
+        width: 100%;
+    }
+
+    .pokemonDesc {
+        padding: 30px 20px 10px 20px;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    .descLabels {
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .attribute {
+        color: rgb(80, 80, 80);
+    }
+
+    .pokemonTitleContainer, .descLabels, .pokemonDesc, body {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="pokemonCard">
+        <div class="cardHeader">
+            <div class="pokemonTitleContainer">
+                <h2 class="pokemonName">Bulbasaur</h2>
+                <p class="pokedexId">#1</p>
+            </div>
+            
+            <div class="pokemonImg">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png" alt="pokemon img">
+            </div>
+        </div>
+        <div class="pokemonDesc">
+            <div class="descLabels pokemonHP">
+                <p class="attribute">HP</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonAtk">
+                <p class="attribute">Ataque</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonDef">
+                <p class="attribute">Defesa</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspAtk">
+                <p class="attribute">Ataque Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspDef">
+                <p class="attribute">Defesa Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonSpeed">
+                <p class="attribute">Velocidade</p>
+                <p>45</p>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
