@@ -1,11 +1,11 @@
 import { Pokemons } from './models/pokemons';
 import { Pokemon } from './models/pokemons';
 import { AddressInfo } from "net";
-import { createServer, IncomingMessage, ServerResponse } from "http";
-
+import express from 'express';
 import { style } from './html/style';
 
 export const listarPokemons = () => {
+    const app = express();
     const listaDePokemons: Pokemon[] = [];
     let pokemonsFront = '';
 
@@ -64,9 +64,8 @@ export const listarPokemons = () => {
 
     console.table(listaDePokemons);
 
-    const pokemonServer = createServer((req: IncomingMessage, res: ServerResponse) => {
-        if(req.url === '/'){
-            res.statusCode = 200;
+    app.get('/', (req, res)=> {
+        res.statusCode = 200;
             res.end(`
             <!DOCTYPE html>
                 <head>
@@ -85,13 +84,10 @@ export const listarPokemons = () => {
             </html>
             
             `); 
-        }
-    
     });
 
-    pokemonServer.listen(8080, "localhost", () => {
-        const { address, port } = pokemonServer.address() as AddressInfo;
-        console.log(`Front listening on http://${address}:${port}/`);
+    app.listen(8080, "localhost", () => {
+        console.log(`Front listening on http://localhost:8080/`);
     })
     return listaDePokemons;
 }
