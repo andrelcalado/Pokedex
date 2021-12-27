@@ -17,6 +17,7 @@
         padding: 50px;
         font-family: sans-serif;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .pokemonCard {
@@ -25,8 +26,8 @@
         box-shadow: 0px 0px 25px rgba(54, 54, 54, 0.2);
         border-radius: 5px;
         overflow: hidden;
+        margin: 10px;
         width: 200px;
-        height: 450px;
         transition: 0.4s;
     }
 
@@ -35,10 +36,24 @@
         box-shadow: 0px 0px 25px rgba(1, 157, 201, 0.2);
     }
 
+    .pokemonCard:hover .saibaMaisContainer > .saibaMaisButton > button {
+        background-color: rgb(0, 132, 255);
+
+    }
+
     .cardHeader {
         padding: 20px 20px 0px 20px;
-        background-color: rgb(179, 222, 243);
-        
+        background-color: #bcccdb;
+        /* background-color: #bcccdb; Normal */
+        /* background-color: #84eaee; Water */
+        /* background-color: #d7ee84; Bug */
+        /* background-color: #84eea7; Grass */
+        /* background-color: #ff9fd9; Fairy */
+        /* background-color: #ff9fd9; Fairy */
+        /* background-color: #DEAF83; Ground */
+        /* background-color: #FADD84; Eletric*/
+        /* background-color: #ff9090; Fire */
+        /* background-color: #BFA2FA; Poison */
     }
 
     .pokemonTitleContainer {
@@ -74,7 +89,40 @@
         color: rgb(80, 80, 80);
     }
 
-    .pokemonTitleContainer, .descLabels, .pokemonDesc, body {
+    .pokemonTypesContainer > .type {
+        margin: 3px;
+        padding: 5px 13px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: rgb(241, 241, 241);
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    .pokemonTypesContainer {
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+    }
+
+    .saibaMaisContainer {
+        justify-content: center;
+    }
+
+    .saibaMaisContainer > .saibaMaisButton {
+        margin-top: -10px;
+    }
+
+    .saibaMaisContainer > .saibaMaisButton > button {
+        background-color: rgb(0, 89, 255);
+        border: none;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color:#fff;
+        transition: 0.4s;
+    }
+
+    .pokemonTitleContainer, .descLabels, .pokemonDesc, body, .pokemonTypesContainer,
+    .saibaMaisContainer {
         display: flex;
     }
 </style>
@@ -85,6 +133,15 @@
             <div class="pokemonTitleContainer">
                 <h2 class="pokemonName">Bulbasaur</h2>
                 <p class="pokedexId">#1</p>
+            </div>
+
+            <div class="pokemonTypesContainer">
+                <div class="type">
+                    <p>poison</p>
+                </div>
+                <div class="type">
+                    <p>poison</p>
+                </div>
             </div>
             
             <div class="pokemonImg">
@@ -121,7 +178,126 @@
                 <p class="attribute">Velocidade</p>
                 <p>45</p>
             </div>
+        </div>
+        <div class="saibaMaisContainer">
+            <div class="saibaMaisButton">
+                <button class="saibaMaisButton">Saiba mais</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pokemonCard">
+        <div class="cardHeader">
+            <div class="pokemonTitleContainer">
+                <h2 class="pokemonName">Bulbasaur</h2>
+                <p class="pokedexId">#1</p>
+            </div>
 
+            <div class="pokemonTypesContainer">
+                <div class="type">
+                    <p>poison</p>
+                </div>
+                <div class="type">
+                    <p>poison</p>
+                </div>
+            </div>
+            
+            <div class="pokemonImg">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png" alt="pokemon img">
+            </div>
+        </div>
+        <div class="pokemonDesc">
+            <div class="descLabels pokemonHP">
+                <p class="attribute">HP</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonAtk">
+                <p class="attribute">Ataque</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonDef">
+                <p class="attribute">Defesa</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspAtk">
+                <p class="attribute">Ataque Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspDef">
+                <p class="attribute">Defesa Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonSpeed">
+                <p class="attribute">Velocidade</p>
+                <p>45</p>
+            </div>
+        </div>
+        <div class="saibaMaisContainer">
+            <div class="saibaMaisButton">
+                <button>Saiba mais</button>
+            </div>
+        </div>
+    </div>
+    <div class="pokemonCard">
+        <div class="cardHeader">
+            <div class="pokemonTitleContainer">
+                <h2 class="pokemonName">Bulbasaur</h2>
+                <p class="pokedexId">#1</p>
+            </div>
+
+            <div class="pokemonTypesContainer">
+                <div class="type">
+                    <p>poison</p>
+                </div>
+                <div class="type">
+                    <p>poison</p>
+                </div>
+            </div>
+            
+            <div class="pokemonImg">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png" alt="pokemon img">
+            </div>
+        </div>
+        <div class="pokemonDesc">
+            <div class="descLabels pokemonHP">
+                <p class="attribute">HP</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonAtk">
+                <p class="attribute">Ataque</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonDef">
+                <p class="attribute">Defesa</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspAtk">
+                <p class="attribute">Ataque Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonEspDef">
+                <p class="attribute">Defesa Especial</p>
+                <p>45</p>
+            </div>
+
+            <div class="descLabels pokemonSpeed">
+                <p class="attribute">Velocidade</p>
+                <p>45</p>
+            </div>
+        </div>
+        <div class="saibaMaisContainer">
+            <div class="saibaMaisButton">
+                <button>Saiba mais</button>
+            </div>
         </div>
     </div>
     

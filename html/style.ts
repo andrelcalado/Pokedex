@@ -1,37 +1,40 @@
-export const style = '<style>\
+export const style = () => {
+    return '<style>\
 * {\
     margin: 0px;\
     padding: 0px;\
 }\
 \
 body {\
-    flex-wrap: wrap;\
     padding: 50px;\
     font-family: sans-serif;\
     justify-content: center;\
+    flex-wrap: wrap;\
 }\
 \
 .pokemonCard {\
-    margin: 20px;\
+    cursor: pointer;\
     position: relative;\
     bottom: 0;\
     box-shadow: 0px 0px 25px rgba(54, 54, 54, 0.2);\
     border-radius: 5px;\
     overflow: hidden;\
+    margin: 10px;\
     width: 200px;\
-    height: 450px;\
     transition: 0.4s;\
 }\
 \
-.pokemonCard:hover {\
+.pokemonCard:hover{\
     bottom: 10px;\
     box-shadow: 0px 0px 25px rgba(1, 157, 201, 0.2);\
 }\
 \
+.pokemonCard:hover .saibaMaisContainer > .saibaMaisButton > button {\
+    background-color: rgb(0, 132, 255);\
+}\
+\
 .cardHeader {\
     padding: 20px 20px 0px 20px;\
-    background-color: rgb(179, 222, 243);\
-    \
 }\
 \
 .pokemonTitleContainer {\
@@ -67,7 +70,40 @@ body {\
     color: rgb(80, 80, 80);\
 }\
 \
-.pokemonTitleContainer, .descLabels, .pokemonDesc, body {\
+.pokemonTypesContainer > .type {\
+    margin: 3px;\
+    padding: 5px 13px;\
+    background-color: rgba(0, 0, 0, 0.1);\
+    color: rgb(241, 241, 241);\
+    font-size: 12px;\
+    border-radius: 20px;\
+}\
+\
+.pokemonTypesContainer {\
+    flex-wrap: wrap;\
+    margin-bottom: -20px;\
+}\
+\
+.saibaMaisContainer {\
+    justify-content: center;\
+}\
+\
+.saibaMaisContainer > .saibaMaisButton {\
+    margin-top: -10px;\
+}\
+\
+.saibaMaisContainer > .saibaMaisButton > button {\
+    background-color: rgb(0, 89, 255);\
+    border: none;\
+    margin-bottom: 10px;\
+    padding: 10px 20px;\
+    border-radius: 5px;\
+    color:#fff;\
+    transition: 0.4s;\
+}\
+\
+.pokemonTitleContainer, .descLabels, .pokemonDesc, body, .pokemonTypesContainer,\
+.saibaMaisContainer {\
     display: flex;\
 }\
-</style>';
+</style>'};
