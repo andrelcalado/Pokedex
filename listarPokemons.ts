@@ -105,6 +105,11 @@ export const listarPokemons = () => {
 
     console.table(listaDePokemons);
 
+    app.get('/', (req, res) => {
+        res.statusCode = 200;
+        res.redirect('/pokemons');
+    })
+
     app.get('/pokemons', (req, res)=> {
         res.statusCode = 200;
             res.end(`
@@ -123,10 +128,6 @@ export const listarPokemons = () => {
             
             `); 
     });
-
-    
-
-
 
     app.get('/pokemons/:id', (req, res) => {
         let pokemonBody = '<body>';
